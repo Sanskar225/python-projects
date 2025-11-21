@@ -2,7 +2,7 @@ import heapq
 import time
 
 class CleaningBot:
-    def _init_(self, bot_id, start_pos, color):
+    def __init__(self, bot_id, start_pos, color):
         self.id = bot_id
         self.pos = start_pos
         self.color = color
@@ -141,5 +141,5 @@ def main():
     print(f"\033[92mBot 2\033[0m: {len(bot2.cleaned)} cells")
     print(f"{'='*50}\n")
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()

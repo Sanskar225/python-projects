@@ -14,7 +14,7 @@ MAZE_LAYOUT = [
 
 
 class CooperativeMaze:
-    def _init_(self, layout):
+    def __init__(self, layout):
         self.grid = [row[:] for row in layout]
         self.rows = len(self.grid)
         self.cols = len(self.grid[0])
@@ -162,6 +162,6 @@ class CooperativeMaze:
 
 
 # --- Execution ---
-if _name_ == "_main_":
+if __name__ == "__main__":
     game = CooperativeMaze(MAZE_LAYOUT)
     game.run_simulation()
