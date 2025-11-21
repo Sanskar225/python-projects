@@ -1,7 +1,7 @@
 import time
 
 class PaintingRobot:
-    def _init_(self, robot_id, start_pos, color, symbol):
+    def __init__(self, robot_id, start_pos, color, symbol):
         self.id = robot_id
         self.pos = start_pos
         self.color = color
@@ -37,7 +37,7 @@ class PaintingRobot:
 
 
 class GridPaintingSystem:
-    def _init_(self):
+    def __init__(self):
         self.rows = 8
         self.cols = 16
         self.grid = [[0 for _ in range(self.cols)] for _ in range(self.rows)]
@@ -119,6 +119,6 @@ class GridPaintingSystem:
         print(f"{'='*60}\n")
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     system = GridPaintingSystem()
     system.run()

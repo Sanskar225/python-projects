@@ -2,7 +2,7 @@ import time
 from collections import deque
 
 class WarehouseAgent:
-    def _init_(self, agent_id, start_pos, symbol):
+    def __init__(self, agent_id, start_pos, symbol):
         self.id, self.pos, self.symbol, self.collected, self.path = agent_id, start_pos, symbol, [], []
     
     def bfs(self, start, goal, grid, obstacles):
@@ -198,6 +198,6 @@ class WarehouseSystem:
         print(f"\n{'='*50}\n")
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     system = WarehouseSystem()
     system.run()

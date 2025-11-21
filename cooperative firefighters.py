@@ -2,7 +2,7 @@ import time
 from collections import deque
 
 class Firefighter:
-    def _init_(self, agent_id, start_pos, symbol):
+    def __init__(self, agent_id, start_pos, symbol):
         self.id, self.pos, self.symbol, self.extinguished, self.path = agent_id, start_pos, symbol, [], []
     
     def bfs(self, start, goals, grid):
@@ -20,7 +20,7 @@ class Firefighter:
 
 
 class FirefightingSystem:
-    def _init_(self):
+    def __init__(self):
         self.rows = 10
         self.cols = 16
         self.grid = [[0 for _ in range(self.cols)] for _ in range(self.rows)]
@@ -129,6 +129,6 @@ class FirefightingSystem:
         print(f"{'='*60}\n")
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     system = FirefightingSystem()
     system.run()

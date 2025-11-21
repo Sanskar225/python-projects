@@ -2,7 +2,7 @@ import time
 from collections import deque
 
 class CollectorAgent:
-    def _init_(self, agent_id, start_pos, symbol):
+    def __init__(self, agent_id, start_pos, symbol):
         self.id, self.pos, self.symbol, self.collected, self.path = agent_id, start_pos, symbol, [], []
     
     def bfs(self, start, goals, grid):
@@ -20,7 +20,7 @@ class CollectorAgent:
 
 
 class ResourceCollectionSystem:
-    def _init_(self):
+    def __init__(self):
         self.rows, self.cols = 10, 16
         self.grid = [[0 for _ in range(self.cols)] for _ in range(self.rows)]
         
@@ -140,6 +140,5 @@ class ResourceCollectionSystem:
         print(f"\n{'='*60}\n")
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     system = ResourceCollectionSystem()
-    system.run()

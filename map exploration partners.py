@@ -1,7 +1,7 @@
 import time
 
 class ExplorerAgent:
-    def _init_(self, agent_id, start_pos, symbol):
+    def __init__(self, agent_id, start_pos, symbol):
         self.id, self.pos, self.symbol, self.explored = agent_id, start_pos, symbol, [start_pos]
     
     def explore_next(self, region, explored_all):
@@ -25,7 +25,7 @@ class ExplorerAgent:
 
 
 class MapExplorationSystem:
-    def _init_(self):
+    def __init__(self):
         self.rows, self.cols = 8, 12
         self.total_cells = self.rows * self.cols
         
@@ -196,6 +196,6 @@ class MapExplorationSystem:
         print(f"\n{'='*70}\n")
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     system = MapExplorationSystem()
     system.run()

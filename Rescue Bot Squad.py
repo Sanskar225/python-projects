@@ -2,7 +2,7 @@ import time
 from collections import deque
 
 class RescueBot:
-    def _init_(self, bot_id, start_pos, symbol):
+    def __init__(self, bot_id, start_pos, symbol):
         self.id = bot_id
         self.pos = start_pos
         self.symbol = symbol
@@ -35,7 +35,7 @@ class RescueBot:
 
 
 class RescueSystem:
-    def _init_(self):
+    def __init__(self):
         # Maze: 0=path, 1=wall - fully connected maze
         self.maze = [
             [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -197,6 +197,6 @@ class RescueSystem:
         print(f"{'='*50}\n")
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     system = RescueSystem()
     system.run()

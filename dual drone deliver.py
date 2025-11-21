@@ -2,7 +2,7 @@ import heapq
 import time
 
 class Drone:
-    def _init_(self, drone_id, start_pos):
+    def __init__(self, drone_id, start_pos):
         self.id = drone_id
         self.pos = start_pos
         self.path = []
@@ -42,7 +42,7 @@ class Drone:
 
 
 class DeliverySystem:
-    def _init_(self):
+    def __init__(self):
         self.rows = 12
         self.cols = 20
         self.grid = [[0 for _ in range(self.cols)] for _ in range(self.rows)]
@@ -207,6 +207,6 @@ class DeliverySystem:
         print(f"{'='*70}\n")
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     system = DeliverySystem()
     system.run()
