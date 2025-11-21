@@ -21,7 +21,7 @@ class WarehouseAgent:
 
 
 class WarehouseSystem:
-    def _init_(self):
+    def __init__(self):
         # Warehouse grid: 0=path, 1=obstacle
         self.grid = [
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
